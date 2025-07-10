@@ -4,6 +4,8 @@
  */
 package com.mycompany.sistemaacademico;
 
+import com.mycompany.sistemaacademico.Persona.Persona;
+
 /**
  *
  * @author Dell
@@ -20,6 +22,15 @@ public class PersonaInstitucional extends Persona{
         super(id, nombre, correoPersonal, cedula);
         this.correoInstitucional = correoInstitucional;
     }
+
+    public String getCorreoInstitucional() {
+        return correoInstitucional;
+    }
+
+    public void setCorreoInstitucional(String correoInstitucional) {
+        this.correoInstitucional = correoInstitucional;
+    }
+    
 
     @Override
     public String toString() {

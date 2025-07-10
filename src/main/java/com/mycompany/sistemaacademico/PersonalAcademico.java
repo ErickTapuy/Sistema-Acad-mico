@@ -1,6 +1,8 @@
 
 package com.mycompany.sistemaacademico;
 
+import com.mycompany.sistemaacademico.Empleado.Empleado;
+
 
 public class PersonalAcademico extends Empleado{
     

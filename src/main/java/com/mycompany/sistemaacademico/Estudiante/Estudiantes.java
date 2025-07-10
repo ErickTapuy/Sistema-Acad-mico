@@ -16,6 +16,7 @@ public class Estudiantes implements IEstudiantes{
     }
 
     
+    @Override
     public boolean agregarEstudiantes(Estudiante estudiante) {
         if (totalEstudiantes == estudiantes.length) {
             return false;
@@ -27,6 +28,7 @@ public class Estudiantes implements IEstudiantes{
     }
 
   
+    @Override
     public void mostrarDatosE() {
         for (int i = 0; i < totalEstudiantes; i++) {
             System.out.println("------Estudiante------" + "|" + (i + 1) + "|");
@@ -39,9 +41,10 @@ public class Estudiantes implements IEstudiantes{
         }
     }
 
-    public boolean eliminarEstudiante(int id) {
+    @Override
+    public boolean eliminarEstudiante(int codigo) {
         for (int i = 0; i < totalEstudiantes; i++) {
-            if (estudiantes[i].getId() == id) {
+            if (estudiantes[i].getCodigo() == codigo) {
                 for (int j = i; j < totalEstudiantes - 1; j++) {
                     estudiantes[j] = estudiantes[j + 1];
                 }
@@ -53,6 +56,7 @@ public class Estudiantes implements IEstudiantes{
         return false;
     }
 
+    @Override
     public boolean buscarEstudiante(int codigo) {
         for (int i = 0; i < totalEstudiantes; i++) {
             if (estudiantes[i].getCodigo() == codigo) {
@@ -61,15 +65,4 @@ public class Estudiantes implements IEstudiantes{
         }
         return false;
     }
-
-    @Override
-    public boolean actualizarEstudiante(int id, Estudiante estudiante) {
-        for (int i = 0; i < totalEstudiantes; i++) {
-            estudiantes[i] = estudiante;
-            mostrarDatosE();
-            return true;
-        }
-        return false;
-    }
-
 }

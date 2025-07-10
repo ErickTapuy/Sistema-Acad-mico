@@ -6,10 +6,7 @@ package com.mycompany.sistemaacademico;
 
 import com.mycompany.sistemaacademico.Persona.Persona;
 
-/**
- *
- * @author Dell
- */
+
 public class PersonaInstitucional extends Persona{
     
     //atributos

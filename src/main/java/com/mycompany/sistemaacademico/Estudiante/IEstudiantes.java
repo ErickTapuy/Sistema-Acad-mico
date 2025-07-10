@@ -4,9 +4,8 @@ package com.mycompany.sistemaacademico.Estudiante;
 
 public interface IEstudiantes {
     
-    public boolean agregarEstudiante(Estudiante estudiante);
+    public boolean agregarEstudiantes(Estudiante estudiante);
     public void mostrarDatosE();
-    public boolean buscarEstudiante();
-    public boolean eliminarEstudiante();
-    public boolean actualizarEstudiante(int i, Estudiante estudiante);
+    public boolean buscarEstudiante(int codigo);
+    public boolean eliminarEstudiante(int codigo);
 }

@@ -1,5 +1,7 @@
 
-package com.mycompany.sistemaacademico;
+package com.mycompany.sistemaacademico.Empleado;
+
+import com.mycompany.sistemaacademico.PersonaInstitucional;
 
 public class Empleado extends PersonaInstitucional{
     

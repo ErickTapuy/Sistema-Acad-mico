@@ -3,7 +3,6 @@ package com.mycompany.sistemaacademico.Estudiante;
 
 import com.mycompany.sistemaacademico.PersonaInstitucional;
 
-
 public class Estudiante extends PersonaInstitucional{
     
     
@@ -30,5 +29,4 @@ public class Estudiante extends PersonaInstitucional{
     public String toString() {
         return "Estudiante{" + "codigo=" + codigo + '}';
     }
-    
 }

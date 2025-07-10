@@ -1,6 +1,6 @@
 package com.mycompany.sistemaacademico.personaexterna;
 
-import com.mycompany.sistemaacademico.Persona;
+import com.mycompany.sistemaacademico.Persona.Persona;
 
 public class PersonaExterna extends Persona {
 

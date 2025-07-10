@@ -29,24 +29,52 @@ public class ControladorEstudiantes {
             String correoInstitucionalEstudiante = vistaEstudiantes.getCorreoInstitucional();
             int codigoEstudiante = Integer.parseInt(vistaEstudiantes.getCodigo());
 
-            Estudiante Destudiante = new Estudiante(
-                    codigoEstudiante,
-                    correoInstitucionalEstudiante,
-                    nombreEstudiante,
-                    correoPersonalEstudiante,
-                    cedulaEstudiante
-            );
-            boolean agregar = iEstudiantes.agregarEstudiantes(Destudiante);
+            Estudiante estudianteD = new Estudiante( codigoEstudiante, correoInstitucionalEstudiante, 0, nombreEstudiante, correoPersonalEstudiante, cedulaEstudiante);
+            boolean agregar = iEstudiantes.agregarEstudiantes(estudianteD);
             if (agregar == true) {
                 notificadorMensaje.mostrarMensaje("Estudiante agregado con éxito");
-                iEstudiantes.imprimirDato();
+                iEstudiantes.mostrarDatosE();
             }
         } catch (Exception e) {
             e.printStackTrace();
             notificadorMensaje.mostrarMensaje("Error al agregar el estudiante");
         }
     }
+    
+    
+    public void procesoBuscarEstudiantes() {
+        try {
+            int iDEstudiante = Integer.parseInt(vistaEstudiantes.getBuscar());
+            boolean estudianteBuscado = iEstudiantes.buscarEstudiante(iDEstudiante);
+            if (estudianteBuscado == true) {
+                 notificadorMensaje.mostrarMensaje("Estudiante encontrado");
+                // vistaEstudiantes.setCedula(estudianteBuscado.getCedula());
+                // vistaEstudiantes.setCodigo(String.valueOf(estudianteBuscado.getCodigo()));
+                // vistaEstudiantes.setCorreoPersonal(estudianteBuscado.getCorreo());
+                 //vistaEstudiantes.setCorreoInstitucional(estudianteBuscado.getCorreoInstitucional());
+                 //vistaEstudiantes.setId(String.valueOf(estudianteBuscado.getId()));
+                 //vistaEstudiantes.setNombre(estudianteBuscado.getNombre());
+                
+                
+            }else{
+                notificadorMensaje.mostrarMensaje("Estudiante no encontrado");
+            }
+        } catch (Exception e) {
+            notificadorMensaje.mostrarMensaje("Error al buscar el estudiante verifique que el codigo este correcto");
+        }
+    }
 
- 
+    public void procesoEliminarEstudiantes() {
+        try {
+            int iDEstudiante = Integer.parseInt(vistaEstudiantes.getBuscar());
+            boolean estudianteD = iEstudiantes.buscarEstudiante(iDEstudiante);
+            if (estudianteD == true) {
+                iEstudiantes.eliminarEstudiante(iDEstudiante);
+                notificadorMensaje.mostrarMensaje("Estudiante eliminado");
+            }
+        } catch (Exception e) {
+            notificadorMensaje.mostrarMensaje("Error al eliminar el estudiante");
+        }
+    }
 
 }

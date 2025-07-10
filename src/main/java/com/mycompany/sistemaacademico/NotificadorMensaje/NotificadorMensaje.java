@@ -9,5 +9,9 @@ package com.mycompany.sistemaacademico.NotificadorMensaje;
  * @author Dell
  */
 public class NotificadorMensaje {
+
+    public void mostrarMensaje(String estudiante_agregado_con_éxito) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
